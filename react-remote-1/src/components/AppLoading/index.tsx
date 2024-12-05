@@ -1,9 +1,12 @@
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 
 export type AppLoadingProps = {
-  isOpen?: boolean;
+  isOpen: boolean;
 };
 
 export const AppLoading: FC<AppLoadingProps> = () => {
-  return <div>AppLoading</div>;
+  const { t } = useTranslation();
+
+  return <div>{t("remote:welcome")}</div>;
 };
